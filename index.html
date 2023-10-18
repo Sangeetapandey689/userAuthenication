@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker App</title>
+</head>
+<body>
+    <!-- Login/Signup Form -->
+    <div id="login-form">
+        <h2>Login</h2>
+        <input type="text" id="login-username" placeholder="Username">
+        <input type="password" id="login-password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p>Don't have an account? <a href="#" onclick="showSignup()">Signup</a></p>
+    </div>
+    
+    <div id="signup-form" style="display: none;">
+        <h2>Signup</h2>
+        <input type="text" id="signup-username" placeholder="Username">
+        <input type="password" id="signup-password" placeholder="Password">
+        <button onclick="signup()">Signup</button>
+        <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+    </div>
+    
+    <!-- Dashboard -->
+    <div id="dashboard" style="display: none;">
+        <h2>Expense Tracker</h2>
+        <form id="expense-form">
+            <input type="text" id="money-spent" placeholder="Money Spent">
+            <input type="text" id="expense-description" placeholder="Description">
+            <select id="expense-category">
+                <option value="Food">Food</option>
+                <option value="Petrol">Petrol</option>
+                <option value="Salary">Salary</option>
+                <!-- Add more options as needed -->
+            </select>
+            <button onclick="addExpense()">Add Expense</button>
+        </form>
+        
+        <h3>Your Expenses:</h3>
+        <table id="expense-table">
+            <!-- Expense entries will be displayed here -->
+        </table>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
